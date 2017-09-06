@@ -1,13 +1,58 @@
 body {
-    text-align: center;
     background: white;
 }
 
 #navbar {
     box-shadow: none;
+    padding-bottom: 2em;
 }
+
+.input-field input:focus {
+  border-bottom: 1px solid #1976D2 !important;
+  box-shadow: 0 1px 0 0 #1976D2 !important;
+}
+
+.input-field input:focus + label {
+  color: #1976D2 !important;
+}
+
+.input-field .prefix {
+    width: auto;
+    font-size: 2.5rem;
+}
+
+.background-icon {
+    background: #1976D2;
+    text-align: center;
+    padding: 2px;
+}
+
+.brand-logo {
+    font-weight: bold;
+}
+
+.intro {
+    background: url("images/memphis-colorful.png");
+    padding: 1em;
+}
+
+.home-text {
+    padding: 0 2rem;
+}
+
+.email-id {
+    color: #1976D2;
+    font-size: 1.5em;
+}
+
+.phone-number {
+    color: #135099;
+    font-size: 1.5em;
+}
+
 /*Mobile*/
 @media screen and (max-width: 580px){
-
+    nav .brand-logo {
+        font-size: 1.5rem;
     }
 }
