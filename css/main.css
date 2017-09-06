@@ -1,0 +1,13 @@
+body {
+    text-align: center;
+    background: white;
+}
+
+#navbar {
+    box-shadow: none;
+}
+/*Mobile*/
+@media screen and (max-width: 580px){
+
+    }
+}
