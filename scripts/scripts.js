@@ -2,7 +2,7 @@ $(document).ready(function(){
 	$(".button-collapse").sideNav({
       closeOnClick: true,
       draggable: true,
-  });
+    });
 
 	$('.scroll-nav').click(function(e) {
 		var link = $(this).attr('href');
@@ -13,5 +13,5 @@ $(document).ready(function(){
 	});
 
     $('select').material_select();
-		$('.collapsible').collapsible();
+	$('.collapsible').collapsible();
 });
