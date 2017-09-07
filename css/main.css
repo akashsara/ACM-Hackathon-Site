@@ -2,18 +2,9 @@ body {
     background: white;
 }
 
-.multi-shadow {
-  border: 1px solid black;
-  border-radius: 10%;
-}
-
-.nav-special-effect:hover {
-  background-color: #1976D2;
-  color: white !important;
-}
-
 #navbar {
     box-shadow: none;
+    padding-bottom: 2em;
 }
 
 .input-field input:focus {
@@ -57,10 +48,6 @@ body {
 .phone-number {
     color: #135099;
     font-size: 1.5em;
-}
-
-.nav-special-effect {
-
 }
 
 /*Mobile*/
