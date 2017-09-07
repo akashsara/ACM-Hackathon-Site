@@ -6,17 +6,38 @@
 	<meta name="author" content="Akash Saravanan">
 	<title>H.A.C.C. 2017</title>
 	<!-- Material Icons -->
-    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+	<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 	<!-- Compiled and minified CSS -->
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.1/css/materialize.min.css">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.css" />
 	<!-- Custom style -->
 	<link href="css/main.css" rel="stylesheet">
+	<!-- firebase -->
+	<script src="scripts/login.js" charset="utf-8"></script>
+	<script src="https://www.gstatic.com/firebasejs/4.3.0/firebase-app.js"></script>
+	<script src="https://www.gstatic.com/firebasejs/4.3.0/firebase-auth.js"></script>
+	<script src="https://www.gstatic.com/firebasejs/4.3.0/firebase-database.js"></script>
+	<script src="https://www.gstatic.com/firebasejs/4.3.0/firebase-messaging.js"></script>
+
+	<script src="https://www.gstatic.com/firebasejs/4.3.0/firebase.js"></script>
+	<script>
+	// Initialize Firebase
+	var config = {
+		apiKey: "AIzaSyAioAAU8OQR-LqHtM11Db6oLKvvzYt_on4",
+		authDomain: "hackathon-341ba.firebaseapp.com",
+		databaseURL: "https://hackathon-341ba.firebaseio.com",
+		projectId: "hackathon-341ba",
+		storageBucket: "",
+		messagingSenderId: "785944354937"
+	};
+	firebase.initializeApp(config);
+	var database = firebase.database();
+	</script>
 </head>
 <body>
 	<!-- Navbar
-    ================================================== -->
+	================================================== -->
 	<div class="navbar-fixed">
 		<nav id="navbar" class="white">
 			<div class="nav-wrapper">
@@ -24,22 +45,22 @@
 				<a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons blue-text">menu</i></a>
 				<ul id="nav-mobile" class="right hide-on-med-and-down">
 					<li><a href="index.html" class="blue-text text-darken-2 waves-effect waves-light nav-special-effect">Home</a></li>
-          <li><a href="register.html" class="blue-text text-darken-2 waves-effect waves-light nav-special-effect">Register</a></li>
+					<li><a href="register.html" class="blue-text text-darken-2 waves-effect waves-light nav-special-effect">Register</a></li>
 				</ul>
 			</div>
 		</nav>
 	</div>
 	<ul class="side-nav" id="mobile-demo">
 		<li><a href="index.html" class="blue-text text-darken-2">Home</a></li>
-        <li><a href="register.html" class="blue-text text-darken-2">Register</a></li>
+		<li><a href="register.html" class="blue-text text-darken-2">Register</a></li>
 	</ul>
 
 	<div id="signup" class="container">
 		<div class="row">
-			<form class="col s12 xl8 offset-xl2" action="#">
+			<form id="regform" class="col s12 xl8 offset-xl2"  action="" onsubmit="writeto();">
 				<ul class="collapsible blue-text" data-collapsible="accordion">
 					<li>
-						<div class="collapsible-header">Team Information</div>
+						<div class="collapsible-header active">Team Information*</div>
 						<div class="collapsible-body">
 							<div class="row">
 								<div class="input-field col s12 m8">
@@ -60,7 +81,7 @@
 						</div>
 					</li>
 					<li>
-						<div class="collapsible-header">Member 1 Information</div>
+						<div class="collapsible-header">Member 1 Information*</div>
 						<div class="collapsible-body">
 							<div class="row">
 								<div class="input-field col s12 m6">
@@ -96,7 +117,7 @@
 						</div>
 					</li>
 					<li>
-						<div class="collapsible-header">Member 2 Information</div>
+						<div class="collapsible-header">Member 2 Information*</div>
 						<div class="collapsible-body">
 							<div class="row">
 								<div class="input-field col s12 m6">
@@ -207,8 +228,8 @@
 				<!--Payment-->
 				<div class="row">
 					<div class="input-field col s6">
-						<button type="submit" class="waves-effect waves-light btn blue modal-trigger" href="#popup">
-							<i class="material-icons right">done</i>Pay Now!
+						<button type="submit" class="waves-effect waves-light btn blue modal-trigger">
+							<i class="material-icons right">done</i>Register!
 						</button>
 					</div>
 				</div>
@@ -216,17 +237,17 @@
 		</div>
 	</div>
 	<!-- core JavaScript
-    ================================================== -->
-    <!-- Placed at the end of the document so the pages load faster -->
+	================================================== -->
+	<!-- Placed at the end of the document so the pages load faster -->
 	<!-- Compiled and minified JQuery -->
 	<script src="https://code.jquery.com/jquery-3.2.1.min.js"
-			integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
-			crossorigin="anonymous"></script>
-    <!-- Compiled and minified JavaScript -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.1/js/materialize.min.js"></script>
+	integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+	crossorigin="anonymous"></script>
+	<!-- Compiled and minified JavaScript -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.1/js/materialize.min.js"></script>
 	<!-- Custom scripts -->
-    <script src="scripts/scripts.js"></script>
-    <!--
-    ================================================== -->
-	</body>
+	<script src="scripts/scripts.js"></script>
+	<!--
+	================================================== -->
+</body>
 </html>
