@@ -1,3 +1,4 @@
+/*Fonts*/
 @font-face
 {
     font-family: NexaRustSans;
@@ -11,43 +12,77 @@
     src: url('fonts/GoodDog.otf');
 }
 
-body {
-    background: white;
-}
-
-.acmLogo {
-    width: 20%;
-}
-
 .defaultFont {
     font-family: 'Roboto';
 }
 
-.title {
-    font-size: 10em;
+.nexaRust {
     font-family: 'NexaRustSans';
     color: #001C3A;
 }
 
-.nexaScript {
+.goodDog {
     font-family: 'GoodDog';
     color: #0D4E85;
 }
 
-.multi-shadow {
-    border: 1px solid black;
-    border-radius: 10%;
+/*Navbar*/
+.brand-logo {
+    font-weight: bold;
 }
 
 .nav-special-effect:hover {
     background-color: #1976D2;
     color: white !important;
+    text-decoration: underline;
+    border-radius: 25%;
 }
 
 #navbar {
     box-shadow: none;
 }
 
+/*Text CSS*/
+
+.intro {
+    padding: 1.5em;
+}
+
+.home-text {
+    padding: 0 2rem;
+}
+
+.title {
+    font-size: 10em;
+}
+
+.email-id {
+    color: #1976D2;
+    font-size: 1.5em;
+}
+
+.phone-number {
+    color: #135099;
+    font-size: 1.5em;
+}
+
+/*Body*/
+
+body {
+    background: white;
+}
+
+/*Images*/
+.multi-shadow {
+    border: 1px solid black;
+    border-radius: 10%;
+}
+
+.acmLogo {
+    width: 20%;
+}
+
+/*Registration Page*/
 .input-field input:focus {
     border-bottom: 1px solid #1976D2 !important;
     box-shadow: 0 1px 0 0 #1976D2 !important;
@@ -68,28 +103,6 @@ body {
     padding: 2px;
 }
 
-.brand-logo {
-    font-weight: bold;
-}
-
-.intro {
-    padding: 1.5em;
-}
-
-.home-text {
-    padding: 0 2rem;
-}
-
-.email-id {
-    color: #1976D2;
-    font-size: 1.5em;
-}
-
-.phone-number {
-    color: #135099;
-    font-size: 1.5em;
-}
-
 /*Mobile*/
 @media screen and (max-width: 720px){
     .title {
@@ -105,7 +118,7 @@ body {
 
 @media screen and (max-width: 580px){
     nav .brand-logo {
-        font-size: 1.5rem;
+        font-size: 1.3em;
     }
     .title {
         font-size: 7em;
