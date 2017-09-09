@@ -1,3 +1,13 @@
+/*Colors*/
+
+.lightBlue {
+	background-color: #1E88E5;
+}
+
+.darkBlue {
+	background-color: #001C3A;
+}
+
 /*Fonts*/
 @font-face
 {
