@@ -66,6 +66,10 @@
     font-size: 1.5em;
 }
 
+.location a{
+    color: #0D4E85 !important;
+}
+
 /*Body*/
 
 body {
