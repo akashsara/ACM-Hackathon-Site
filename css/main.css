@@ -1,15 +1,47 @@
+@font-face
+{
+    font-family: NexaRustSans;
+    src: url('fonts/NexaRustSans-Black.otf');
+    NexaRustScriptL-0.otf
+}
+
+@font-face
+{
+    font-family: GoodDog;
+    src: url('fonts/GoodDog.otf');
+}
+
 body {
     background: white;
 }
 
+.acmLogo {
+    width: 20%;
+}
+
+.defaultFont {
+    font-family: 'Roboto';
+}
+
+.title {
+    font-size: 10em;
+    font-family: 'NexaRustSans';
+    color: #001C3A;
+}
+
+.nexaScript {
+    font-family: 'GoodDog';
+    color: #0D4E85;
+}
+
 .multi-shadow {
-  border: 1px solid black;
-  border-radius: 10%;
+    border: 1px solid black;
+    border-radius: 10%;
 }
 
 .nav-special-effect:hover {
-  background-color: #1976D2;
-  color: white !important;
+    background-color: #1976D2;
+    color: white !important;
 }
 
 #navbar {
@@ -17,12 +49,12 @@ body {
 }
 
 .input-field input:focus {
-  border-bottom: 1px solid #1976D2 !important;
-  box-shadow: 0 1px 0 0 #1976D2 !important;
+    border-bottom: 1px solid #1976D2 !important;
+    box-shadow: 0 1px 0 0 #1976D2 !important;
 }
 
 .input-field input:focus + label {
-  color: #1976D2 !important;
+    color: #1976D2 !important;
 }
 
 .input-field .prefix {
@@ -41,8 +73,7 @@ body {
 }
 
 .intro {
-    background: url("images/memphis-colorful.png");
-    padding: 1em;
+    padding: 1.5em;
 }
 
 .home-text {
@@ -60,8 +91,44 @@ body {
 }
 
 /*Mobile*/
+@media screen and (max-width: 720px){
+    .title {
+        font-size: 9em;
+    }
+}
+
+@media screen and (max-width: 640px){
+    .title {
+        font-size: 8em;
+    }
+}
+
 @media screen and (max-width: 580px){
     nav .brand-logo {
         font-size: 1.5rem;
+    }
+    .title {
+        font-size: 7em;
+    }
+    .acmLogo {
+        width: 50%;
+    }
+}
+
+@media screen and (max-width: 480px){
+    .title {
+        font-size: 5em;
+    }
+    .acmLogo {
+        width: 50%;
+    }
+}
+
+@media screen and (max-width: 360px){
+    .title {
+        font-size: 3.5em;
+    }
+    .nexaScript {
+        font-size: 2.5em;
     }
 }
