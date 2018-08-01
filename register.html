@@ -15,6 +15,20 @@
 	<link href="css/main.css" rel="stylesheet">
 	<!-- firebase -->
 	<script src="scripts/login.js" charset="utf-8"></script>
+
+	<script src="https://www.gstatic.com/firebasejs/5.3.0/firebase.js"></script>
+	<script>
+	  // Initialize Firebase
+	  var config = {
+		apiKey: "AIzaSyCHqAnzch1j8NoHivn6cIkY1-I1YysIsJc",
+		authDomain: "yahh-6c917.firebaseapp.com",
+		databaseURL: "https://yahh-6c917.firebaseio.com",
+		projectId: "yahh-6c917",
+		storageBucket: "",
+		messagingSenderId: "13867834658"
+	  };
+	  firebase.initializeApp(config);
+	</script>
 </head>
 <body>
 	<!-- Navbar
@@ -35,10 +49,10 @@
 		<li><a href="index.html" class="blue-text text-darken-2">Home</a></li>
 		<li><a href="register.html" class="blue-text text-darken-2">Register</a></li>
 	</ul>
-
+	<!-- action="login.php" method="POST" -->
 	<div id="signup" class="container">
 		<div class="row">
-			<form id="regform" class="col s12 xl8 offset-xl2" action="login.php" method="POST">
+			<form id="regform" class="col s12 xl8 offset-xl2" onsubmit="writeto(); return false;">
 				<p class="flow-text">Registration Fee: Rs. 300/Member</p>
 				<ul class="collapsible blue-text formSections" data-collapsible="accordion">
 					<li>
@@ -110,7 +124,7 @@
 				</ul>
 				<div class="row">
 					<div class="input-field col s12">
-						<button type="submit" onsubmit="writeto();" class="waves-effect waves-light btn blue modal-trigger">
+						<button type="submit" class="waves-effect waves-light btn blue modal-trigger">
 							<i class="material-icons right">done</i>Register!
 						</button>
 					</div>
@@ -133,5 +147,6 @@
 	================================================== -->
 
 	<script src="https://js.instamojo.com/v1/button.js"></script>
+	<link rel="stylesheet" href="css/confirmbox.css">
 </body>
 </html>
