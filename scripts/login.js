@@ -10,14 +10,12 @@ function Confirm(title, msg, $true, $false, $link) { /*change*/
                  "<footer>" +
                      "<div class='controls'>" +
                          " <button class='button button-danger doAction'>" + $true + "</button> " +
-                         " <button class='button button-default cancelAction'>" + $false + "</button> " +
                      "</div>" +
                  "</footer>" +
               "</div>" +
             "</div>";
      $('body').prepend($content);
   $('.doAction').click(function () {
-    window.open($link, "_blank"); /*new*/
     $(this).parents('.dialog-ovelay').fadeOut(500, function () {
       $(this).remove();
     });
@@ -118,9 +116,9 @@ function writeto(){
     }
 
       console.log("end");
-      var r=Confirm("Prelude> 'Good Luck!'", "You have successfully registered as " + x.elements[0].value, "Confirm", "Deny", "/");
+      var r=Confirm("'Good Luck!'", "You have successfully registered as " + x.elements[0].value, "Confirm", "Deny", "index.html");
       if (r){
-          window.location.href="/";
+          window.location.href="/index.html";
       }
       return false
 }

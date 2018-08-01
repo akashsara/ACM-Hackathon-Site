@@ -1,3 +1,42 @@
+/*Credits to subtlepatterns.com for the background*/
+
+.reg {
+	background-image: url("images/doodles.png");
+	color: white;
+	font-family: 'Roboto';
+}
+
+.main {
+	background-image: url("images/doodles.png");
+	font-family: 'Roboto';
+	color: #001C3A;
+}
+
+.agenda {
+	background-color: rgba(255, 255, 255, 0.5);
+	border-radius: 20px;
+}
+
+.bold {
+	font-weight: bold;
+}
+
+.yah-logo {
+	width: 40%;
+}
+
+#regform {
+	border: 5px black;
+}
+
+.formSections {
+	background-color: white;
+}
+
+.registerButton {
+	text-align: center;
+}
+
 /*Topics*/
 .item {
 	height: 100px;
@@ -95,6 +134,7 @@
 
 #navbar {
 	box-shadow: none;
+	background-color: #fff;
 }
 
 /*Text CSS*/
@@ -161,9 +201,10 @@ body {
 }
 
 .background-icon {
-	background: #1976D2;
+	background: #000;
 	text-align: center;
 	padding: 2px;
+	border-radius: 5px;
 }
 
 /*Mobile*/
@@ -189,6 +230,9 @@ body {
 	.acmLogo {
 		width: 50%;
 	}
+	.yah-logo {
+		width: 60%;
+	}
 }
 
 @media screen and (max-width: 480px){
@@ -198,13 +242,13 @@ body {
 	.acmLogo {
 		width: 50%;
 	}
+	.yah-logo {
+		width: 80%;
+	}
 }
 
 @media screen and (max-width: 360px){
 	.title {
 		font-size: 3.5em;
-	}
-	.nexaScript {
-		font-size: 2.5em;
 	}
 }

@@ -14,36 +14,39 @@
 	<!-- Custom style -->
 	<link href="css/main.css" rel="stylesheet">
 </head>
-<body>
+<body class="main">
 	<!-- Navbar
 	================================================== -->
 	<div class="navbar-fixed">
-		<nav id="navbar" class="white">
+		<nav id="navbar">
 			<div class="nav-wrapper">
-				<a class="center brand-logo blue-text text-darken-2">Yet Another Hackathon! 2018</a>
+				<a class="center brand-logo blue-text text-darken-4">YAH! 2018</a>
 				<a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons blue-text">menu</i></a>
 				<ul id="nav-mobile" class="right hide-on-med-and-down">
-					<li><a href="#home" class="blue-text text-darken-2 waves-effect waves-light nav-special-effect scroll-nav">Home</a></li>
-					<li><a href="#about" class="blue-text text-darken-2 waves-effect waves-light nav-special-effect scroll-nav">About</a></li>
-					<li><a href="#faq" class="blue-text text-darken-2 waves-effect waves-light nav-special-effect scroll-nav">FAQ</a></li>
-					<li><a href="#contact" class="blue-text text-darken-2 waves-effect waves-light nav-special-effect scroll-nav">Contact</a></li>
-					<li><a href="register.html" class="blue-text text-darken-2 waves-effect waves-light nav-special-effect">Register</a></li>
+					<li><a href="#home" class="blue-text text-darken-4 waves-effect waves-light nav-special-effect scroll-nav">Home</a></li>
+					<li><a href="#sponsors" class="blue-text text-darken-4 waves-effect waves-light nav-special-effect scroll-nav">Sponsors</a></li>
+					<li><a href="#domains" class="blue-text text-darken-4 waves-effect waves-light nav-special-effect scroll-nav">Domains</a></li>
+					<li><a href="#format" class="blue-text text-darken-4 waves-effect waves-light nav-special-effect scroll-nav">Format</a></li>
+					<li><a href="#faq" class="blue-text text-darken-4 waves-effect waves-light nav-special-effect scroll-nav">FAQ</a></li>
+					<li><a href="#contact" class="blue-text text-darken-4 waves-effect waves-light nav-special-effect scroll-nav">Contact</a></li>
+					<li><a href="register.html" class="blue-text text-darken-4 waves-effect waves-light nav-special-effect">Register</a></li>
 				</ul>
 			</div>
 		</nav>
 	</div>
 	<ul class="side-nav" id="mobile-demo">
 		<li><a href="#home" class="blue-text text-darken-2 scroll-nav">Home</a></li>
-		<li><a href="#about" class="blue-text text-darken-2 scroll-nav">About</a></li>
+		<li><a href="#sponsors" class="blue-text text-darken-2 scroll-nav">Sponsors</a></li>
+		<li><a href="#domains" class="blue-text text-darken-2 scroll-nav">Domains</a></li>
+		<li><a href="#format" class="blue-text text-darken-2 scroll-nav">Format</a></li>
 		<li><a href="#faq" class="blue-text text-darken-2 scroll-nav">FAQ</a></li>
 		<li><a href="#contact" class="blue-text text-darken-2 scroll-nav">Contact Us</a></li>
 		<li><a href="register.html" class="blue-text text-darken-2">Register</a></li>
 	</ul>
 	<div class="container center-align" id="home">
 		<div class="intro">
-			<h1 class="title">YAH! 2018</h1>
-			<h3 class="dates goodDog">August 18<span class="defaultFont">-</span>19, 2018</h3>
-			<h3 class="location goodDog"><a href="https://goo.gl/maps/ta7425eJpPw" target="_blank">Ascendas IT Park</a></h3>
+			<img src="images/logo.png" class="responsive-img yah-logo"/>
+			<h3 class="dates goodDog">August 18<span class="defaultFont">-</span>19, 2018 @ <span class="location goodDog"><a href="https://goo.gl/maps/ta7425eJpPw" target="_blank">Ascendas IT Park</a></span></h3>
 		</div>
 		<div class="home">
 			<a class="waves-effect waves-light btn blue white-text toRegister" href="register.html">Register Now!</a>
@@ -55,21 +58,35 @@
 				And with that in mind, we bring to you...
 			</p>
 			<img src="images/info.png" class="responsive-img"/>
-
 		</div>
-		<div class="about" id="about">
+		<div class="sponsors" id="sponsors">
+			<h4 class="flow-text">
+				YAH! wouldn't be here without
+			</h4>
+			<div class="row sponsorGrid">
+					<div class="col m6">
+						<img src="images/2adpro.png" class="responsive-img acmLogo" style="width:50%"/>
+					</div>
+					<div class="col m6">
+						<img src="images/ascendas.png" class="responsive-img acmLogo" style="width:50%"/>
+						<p>Venue Partner</p>
+					</div>
+			</div>
+		</div>
+		<div class="domains" id="domains">
 			<h3>Problem Domains</h3>
 			<p class="flow-text">
 				So you're in? What do you need to do? Well that's a secret. :P
-				But these are the domains from which we'll give you problem statements. Don't worry though, it'll be something you can use. :)
+				But these are the domains from which we'll give you problem statements. Don't worry though, it'll be something you can work with for sure. :)
+				Do check out our FAQs though. They should answer most of your questions.
 			</p>
 			<div class="row">
 				<div class="col s12 m4">
 					<div class="card lightBlue">
 						<div class="card-content white-text">
 							<span class="card-title">Education</span>
-							<p>Tagline</p>
-							<p>Information</p>
+							<p class="italic">Pls no they just gave out my results..</p>
+							<p>We're looking for innovative ways to make education better.</p>
 						</div>
 					</div>
 				</div>
@@ -77,60 +94,100 @@
 					<div class="card darkBlue">
 						<div class="card-content white-text">
 							<span class="card-title">Governance</span>
-							<p>Tagline</p>
-							<p>Information</p>
+							<p class="italic">Aadhar Ca-NOPE!</p>
+							<p>Other ways to make India great again. #SayNoToTrump</p>
 						</div>
 					</div>
 				</div>
 				<div class="col s12 m4">
 					<div class="card lightBlue">
 						<div class="card-content white-text">
-							<span class="card-title">Secuity</span>
-							<p>Tagline</p>
-							<p>Information</p>
+							<span class="card-title">Security</span>
+							<p class="italic">They stole my Aadhar joke :(</p>
+							<p>People are getting hacked everyday. Halp pls.</p>
 						</div>
 					</div>
 				</div>
 			</div>
-			<h3>A Hackathon?</h3>
+		</div>
+		<div class="format" id="format">
+			<h3>Format</h3>
+			<p class="flow-text">
+				We'll be having two rounds - an online screening round and an on-site hackathon. There's no special work needed for the screening round. Just fill in the registrations form as usual. For the abstract, tell us domains some ideas to <span class="bold">make it safer for an individual in today's world</span>. Note that this is <span class="bold">not the actual problem statement.</span> We will simply use this to judge your problem solving and creativity. Your Github links (Or GitLab or even HackerRank) will provide evidence for your technical skills.
+			</p>
 			<div class="row">
-				<div class="col s12 m6">
-					<img src="images/noob.jpg" class="responsive-img multi-shadow"/>
+				<div class="col s12 m2"></div>
+				<div class="col s12 m4">
+					<table class="highlight centered agenda">
+						<thead>
+							<h4>Saturday, 18th August</h4>
+						</thead>
+						<tbody>
+						  <tr>
+							<td><i class="small material-icons">adjust</i></td>
+							<td>10:00 AM</td>
+							<td>Check-In</td>
+						  </tr>
+						  <tr>
+							<td><i class="small material-icons">adjust</i></td>
+							<td>11:00 AM</td>
+							<td>Welcome & Orientation</td>
+						  </tr>
+						  <tr>
+							<td><i class="small material-icons">adjust</i></td>
+							<td>12:00 PM</td>
+							<td>Kick-Off</td>
+						  </tr>
+						  <tr>
+							<td><i class="small material-icons">adjust</i></td>
+							<td>2:00 PM</td>
+							<td>Lunch</td>
+						  </tr>
+						  <tr>
+							<td><i class="small material-icons">adjust</i></td>
+							<td>8:00 PM</td>
+							<td>Dinner</td>
+						  </tr>
+						</tbody>
+					</table>
 				</div>
-				<div class="col s12 m6">
-					<h4>Anyone is welcome!</h4>
-					<p class="flow-text left-align">
-						Whether you're a first timer or a seasoned veteran, H.A.C.C. is the place to be. We prioritize a fun and enjoyable event over a serious competition. You'll be able to show off your skills without worrying about anything else. We assure it. :)
-					</p>
+				<div class="col s12 m4">
+					<table class="highlight centered agenda">
+						<thead>
+							<h4>Sunday, 19th August</h4>
+						</thead>
+						<tbody>
+						  <tr>
+							<td><i class="small material-icons">adjust</i></td>
+							<td>02:00 AM</td>
+							<td>Midnight Surprise</td>
+						  </tr>
+						  <tr>
+							<td><i class="small material-icons">adjust</i></td>
+							<td>08:00 AM</td>
+							<td>Breakfast</td>
+						  </tr>
+						  <tr>
+							<td><i class="small material-icons">adjust</i></td>
+							<td>12:00 PM</td>
+							<td>Hacking Stops</td>
+						  </tr>
+						  <tr>
+							<td><i class="small material-icons">adjust</i></td>
+							<td>12:30 PM</td>
+							<td>Judging Begins</td>
+						  </tr>
+						  <tr>
+							<td><i class="small material-icons">adjust</i></td>
+							<td>4:00 PM</td>
+							<td>See Ya!</td>
+						  </tr>
+						</tbody>
+					</table>
 				</div>
+				<div class="col s12 m2"></div>
 			</div>
-			<br /><br />
-			<div class="row">
-				<div class="visible-mobile col s12 m6">
-					<img src="images/friends.jpg" class="responsive-img multi-shadow"/>
-				</div>
-				<div class="col s12 m6">
-					<h4>Make some friends!</h4>
-					<p class="flow-text left-align">
-						And while you're at it, why not make some new friends? We've got tons of people from all over attending. This is your chance to discuss ideas and opportunities with them! Who knows, you might even meet a Paul Allen that fits your Bill. ;)
-					</p>
-				</div>
-				<div class="not-visible-mobile col s12 m6">
-					<img src="images/friends.jpg" class="responsive-img multi-shadow"/>
-				</div>
-			</div>
-			<br /><br />
-			<div class="row">
-				<div class="col s12 m6">
-					<img src="images/learn.jpg" class="responsive-img multi-shadow"/>
-				</div>
-				<div class="col s12 m6">
-					<h4>Learn new things!</h4>
-					<p class="flow-text left-align">
-						Hackathons aren't just about coding all night and winning a prize. They're one of the best ways to learn something. And sometimes, the best way to solve your own problems is by helping someone else. Don't worry though. If you're ever stuck with something, ask and we'll try our best to help you!
-					</p>
-				</div>
-			</div>
+
 		</div>
 		<div class="faq" id="faq">
 			<div class="row">
@@ -140,15 +197,15 @@
 						<div class="card darkBlue">
 							<div class="card-content white-text">
 								<span class="card-title">Who can participate?</span>
-								<p>Any college student with a valid ID card.</p>
+								<p>Any college-going student with a valid ID card. Engineering, Arts, doesn't matter!</p>
 							</div>
 						</div>
 					</div>
 					<div class="col s12 m6">
 						<div class="card lightBlue">
 							<div class="card-content white-text">
-								<span class="card-title">How much is the entry fee?</span>
-								<p>Rs. 100 per person. We'll take care of the breakfast, lunch, dinner and refreshments!</p>
+								<span class="card-title">How much does it cost?</span>
+								<p>Rs. 300 per person. We'll take care of all your meals & refreshments! You'll pay this only if you're selected for the on-site round. Online round is free of cost!</p>
 							</div>
 						</div>
 					</div>
@@ -157,16 +214,34 @@
 					<div class="col s12 m6">
 						<div class="card lightBlue colorSwap-DarkBlue">
 							<div class="card-content white-text">
-								<span class="card-title">How big can my team be?</span>
-								<p>You can have a team of 2-4 members from the same or from different institutions. We recommend having a team with a mix of design and development skills.</p>
+								<span class="card-title">What should I bring?</span>
+								<p>Your college ID, your phone, laptop, chargers and any electronics you need. A change of clothes is also recommended along with sleeping equipment that you might want.</p>
 							</div>
 						</div>
 					</div>
 					<div class="col s12 m6">
 						<div class="card darkBlue colorSwap-LightBlue">
 							<div class="card-content white-text">
-								<span class="card-title">What do I have to bring?</span>
-								<p>Your college ID, your phone, laptop, chargers and any electronics you need. A change of clothes is also recommended along with sleeping equipment that you might want.</p>
+								<span class="card-title">What shouldn't I bring?</span>
+								<p>Drugs, alcohol, weapons of any kind. If you're unsure of it, ask us domains it.</p>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col s12 m6">
+						<div class="card darkBlue">
+							<div class="card-content white-text">
+								<span class="card-title">What do you get?</span>
+								<p>You get to meet new people with similar interests, compete to win a massive prize, have opportunities to gain internships or jobs from some cool companies, an amazing learning experience and some awesome memories. :)</p>
+							</div>
+						</div>
+					</div>
+					<div class="col s12 m6">
+						<div class="card lightBlue colorSwap-DarkBlue">
+							<div class="card-content white-text">
+								<span class="card-title">How big can my team be?</span>
+								<p>You can have a team of 2-3 members from the same or from different institutions. We recommend having a team with a mix of design and development skills. </p>
 							</div>
 						</div>
 					</div>
@@ -179,8 +254,10 @@
 					Still got some questions or concerns? Get in touch with us:
 				</p>
 				<p class="flow-text">
-					<span class="email-id">acm.svcecse@gmail.com</span><br />
-					<span class="phone-number">+91 99627 54468 </span>
+					<span class="email-id"><a href="mailto:acm.svcecse@gmail.com">acm.svcecse@gmail.com</a></span><br />
+					<span class="phone-number">+91 99627 54468 </span><br />
+					<span class="email-id"><a href="https://www.facebook.com/SVCEACM/">Facebook</a></span>
+					
 				</p>
 			</div>
 		</div>
@@ -190,7 +267,7 @@
 					Brought to you by..
 				</p>
 				<a href="https://svce.acm.org"><img src="images/acm.png" class="responsive-img acmLogo" /></a>
-				<a href="http://svcealumni.org/"><img src="images/alumni.jpg" class="responsive-img acmLogo" /></a>
+				<a href="http://svcealumni.org/"><img src="images/alumni.png" class="responsive-img acmLogo" /></a>
 			</div>
 		</div>
 	</div>
