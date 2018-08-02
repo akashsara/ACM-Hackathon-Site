@@ -16,6 +16,7 @@ function Confirm(title, msg, $true, $false, $link) { /*change*/
             "</div>";
      $('body').prepend($content);
   $('.doAction').click(function () {
+    window.open($link,"_self"); /*new*/
     $(this).parents('.dialog-ovelay').fadeOut(500, function () {
       $(this).remove();
     });
@@ -61,7 +62,6 @@ function writeto(){
         }
         else if (no_members=='2'){
             firebase.database().ref('teams/' + TeamName + "__ref:"+ num.toString() + '/').set({
-                [TeamName]:{
                     Member1:{
                         Name:x.elements[4].value,
                         College:x.elements[5].value,
@@ -76,13 +76,11 @@ function writeto(){
                         Phone:x.elements[12].value,
                         Github:x.elements[13].value
                     },
-            },
             Abstract:Abstract
             });
         }
         else{
             firebase.database().ref('teams/' + TeamName + "__ref:"+ num.toString() + '/').set({
-                [TeamName]:{
                     Member1:{
                         Name:x.elements[4].value,
                         College:x.elements[5].value,
@@ -104,7 +102,6 @@ function writeto(){
                         Phone:x.elements[17].value,
                         Github:x.elements[18].value
                     },
-            },
             Abstract:Abstract
             });
         
@@ -116,9 +113,9 @@ function writeto(){
     }
 
       console.log("end");
-      var r=Confirm("'Good Luck!'", "You have successfully registered as " + x.elements[0].value, "Confirm", "Deny", "index.html");
-      if (r){
-          window.location.href="/index.html";
-      }
+      var r=Confirm("'Good Luck!'", "You have successfully registered as " + x.elements[0].value, "Confirm", "Deny", "/index.html");
+    //   if (r){
+    //       window.location.href="/index.html";
+    //   }
       return false
 }
