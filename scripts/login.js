@@ -1,4 +1,4 @@
-function Confirm(title, msg, $true) { /*change*/
+function Confirm(title, msg, $true, $false, $link) { /*change*/
     var $content =  "<div class='dialog-ovelay'>" +
                     "<div class='dialog'><header>" +
                      " <h3> " + title + " </h3> " +
@@ -16,7 +16,6 @@ function Confirm(title, msg, $true) { /*change*/
             "</div>";
      $('body').prepend($content);
   $('.doAction').click(function () {
-    window.location = "index.html"; /*new*/
     $(this).parents('.dialog-ovelay').fadeOut(500, function () {
       $(this).remove();
     });
@@ -62,6 +61,7 @@ function writeto(){
         }
         else if (no_members=='2'){
             firebase.database().ref('teams/' + TeamName + "__ref:"+ num.toString() + '/').set({
+                [TeamName]:{
                     Member1:{
                         Name:x.elements[4].value,
                         College:x.elements[5].value,
@@ -76,11 +76,13 @@ function writeto(){
                         Phone:x.elements[12].value,
                         Github:x.elements[13].value
                     },
+            },
             Abstract:Abstract
             });
         }
         else{
             firebase.database().ref('teams/' + TeamName + "__ref:"+ num.toString() + '/').set({
+                [TeamName]:{
                     Member1:{
                         Name:x.elements[4].value,
                         College:x.elements[5].value,
@@ -102,14 +104,21 @@ function writeto(){
                         Phone:x.elements[17].value,
                         Github:x.elements[18].value
                     },
+            },
             Abstract:Abstract
             });
         
         }
+        console.log('DB updated');
     }
     catch(err){
         console.log(err);
     }
-      var r=Confirm("'Good Luck!'", "You have successfully registered as " + x.elements[0].value, "Confirm");
+
+      console.log("end");
+      var r=Confirm("'Good Luck!'", "You have successfully registered as " + x.elements[0].value, "Confirm", "Deny", "index.html");
+      if (r){
+          window.location.href="/index.html";
+      }
       return false
 }
