@@ -1,4 +1,4 @@
-function Confirm(title, msg, $true, $false, $link) { /*change*/
+function Confirm(title, msg, $true) { /*change*/
     var $content =  "<div class='dialog-ovelay'>" +
                     "<div class='dialog'><header>" +
                      " <h3> " + title + " </h3> " +
@@ -16,7 +16,7 @@ function Confirm(title, msg, $true, $false, $link) { /*change*/
             "</div>";
      $('body').prepend($content);
   $('.doAction').click(function () {
-    window.open($link,"_self"); /*new*/
+    window.location = "index.html"; /*new*/
     $(this).parents('.dialog-ovelay').fadeOut(500, function () {
       $(this).remove();
     });
@@ -106,16 +106,10 @@ function writeto(){
             });
         
         }
-        console.log('DB updated');
     }
     catch(err){
         console.log(err);
     }
-
-      console.log("end");
-      var r=Confirm("'Good Luck!'", "You have successfully registered as " + x.elements[0].value, "Confirm", "Deny", "/index.html");
-    //   if (r){
-    //       window.location.href="/index.html";
-    //   }
+      var r=Confirm("'Good Luck!'", "You have successfully registered as " + x.elements[0].value, "Confirm");
       return false
 }
