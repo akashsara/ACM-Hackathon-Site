@@ -16,7 +16,8 @@ function Confirm(title, msg, $true, $false, $link) { /*change*/
             "</div>";
      $('body').prepend($content);
   $('.doAction').click(function () {
-    window.open($link,"_self"); /*new*/
+    //window.open($link,"_self"); /*new*/
+    window.location = "index.html";
     $(this).parents('.dialog-ovelay').fadeOut(500, function () {
       $(this).remove();
     });

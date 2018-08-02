@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+	<meta name="author" content="Akash Saravanan">
+	<title>Yet Another Hackathon! 2018</title>
+	<!-- Material Icons -->
+	<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+	<!-- Compiled and minified CSS -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.1/css/materialize.min.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.css" />
+	<!-- Custom style -->
+	<link href="css/main.css" rel="stylesheet">
+	<!-- firebase -->
+	<script src="scripts/login.js" charset="utf-8"></script>
+
+	<script src="https://www.gstatic.com/firebasejs/5.3.0/firebase.js"></script>
+	<script>
+	  // Initialize Firebase
+	  var config = {
+		apiKey: "AIzaSyCHqAnzch1j8NoHivn6cIkY1-I1YysIsJc",
+		authDomain: "yahh-6c917.firebaseapp.com",
+		databaseURL: "https://yahh-6c917.firebaseio.com",
+		projectId: "yahh-6c917",
+		storageBucket: "",
+		messagingSenderId: "13867834658"
+	  };
+	  firebase.initializeApp(config);
+	</script>
+</head>
+<body class="reg">
+	<!-- Navbar
+	================================================== -->
+	<div class="navbar-fixed">
+		<nav id="navbar" class="white">
+			<div class="nav-wrapper">
+				<a class="center brand-logo blue-text text-darken-4 flow-text">YAH! 2018</a>
+				<a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons blue-text">menu</i></a>
+				<ul id="nav-mobile" class="right hide-on-med-and-down">
+					<li><a href="index.html" class="blue-text text-darken-4 waves-effect waves-light nav-special-effect">Home</a></li>
+					<li><a href="register.html" class="blue-text text-darken-4 waves-effect waves-light nav-special-effect">Register</a></li>
+				</ul>
+			</div>
+		</nav>
+	</div>
+	<ul class="side-nav" id="mobile-demo">
+		<li><a href="index.html" class="blue-text text-darken-2">Home</a></li>
+		<li><a href="register.html" class="blue-text text-darken-2">Register</a></li>
+	</ul>
+	<!-- action="login.php" method="POST" -->
+	<div id="signup" class="container">
+		<div class="row">
+			<form id="regform" class="col s12 xl8 offset-xl2" action="login.php" method="POST">
+				<ul class="collapsible black-text formSections" data-collapsible="accordion">
+					<li>
+						<div class="collapsible-header active">Team Information</div>
+						<div class="collapsible-body">
+							<div class="row">
+								<div class="input-field col s12 m8">
+									<i class="material-icons prefix white-text text-darken-2 background-icon">people</i>
+									<input id="team_name" name="teamName"type="text" class="validate" data-length="20" required>
+									<label for="team_name">Team Name</label>
+								</div>
+								<div class="input-field col s12 m4">
+									<select class="selectMembers" name="option" required>
+										<option value="" disabled selected>No. of Members</option>
+										<option value="1">1</option>
+										<option value="2">2</option>
+										<option value="3">3</option>
+									</select>
+									<label>No. of Members</label>
+								</div>
+							</div>
+							<div class="row">
+								<div class="input-field col s12">
+									<i class="material-icons prefix white-text text-darken-2 background-icon">backup</i>
+									<label>Abstract (1500 characters max)</label>
+									<textarea id="abstract" name="Abstract" class="validate" data-length="1500" required></textarea>
+								</div>
+								<p class="black-text" style="padding: 10px">
+									Abstract should be on <span class="bold">making an individual safer in the modern world.</span> We're just looking for ideas, not implementations here. That comes during the hackathon. You have space for 1500 characters. We don't expect it to be even that big. Keep it short and to the point.
+								</p>
+							</div>
+						</div>
+					</li>
+					<li>
+						<div class="collapsible-header">Member 1 Information</div>
+						<div class="collapsible-body">
+							<div class="row">
+								<div class="input-field col s12 m12">
+									<i class="material-icons prefix white-text text-darken-2 background-icon">person</i>
+									<input id="member1_name" name="member1_name" type="text" class="validate" data-length="40" pattern="[a-zA-Z]*" title="Names generally have only alphabets" required>
+									<label for="member1_name">Name</label>
+								</div>
+							</div>
+							<div class="row">
+								<div class="input-field col s12">
+									<i class="material-icons prefix white-text text-darken-2 background-icon">school</i>
+									<input id="member1_college" name="member1_college"type="text" class="validate" data-length="50" pattern="[a-zA-Z,.]*" title="Names generally have only alphabets" required>
+									<label for="member1_college">College Name</label>
+								</div>
+							</div>
+							<div class="row">
+								<div class="input-field col s12 m6">
+									<i class="material-icons prefix white-text text-darken-2 background-icon">email</i>
+									<input id="member1_email" name="member1_email"type="email" class="validate" data-length="35" required>
+									<label for="member1_email">Email</label>
+								</div>
+								<div class="input-field col s12 m6">
+									<i class="material-icons prefix white-text text-darken-2 background-icon">local_phone</i>
+									<input id="member1_phone" name="member1_phone"type="tel" class="validate" minlength="10" pattern="[0-9]{10}" data-length="10" maxlength="10" title="Should be a mobile number." required>
+									<label for="member1_phone">Phone Number</label>
+								</div>
+							</div>
+							<div class="row">
+								<div class="input-field col s12">
+									<i class="material-icons prefix white-text text-darken-2 background-icon">computer</i>
+									<input id="member1_github" name="member1_github" type="text" class="validate" data-length="80">
+									<label for="member1_github">Github (Or Alternative)</label>
+								</div>
+							</div>
+						</div>
+					</li>
+				</ul>
+				<div class="row">
+					<div class="input-field col s12 registerButton">
+						<button type="submit" class="waves-effect waves-light btn darkBlue modal-trigger">
+							<i class="material-icons right">done</i>Register!
+						</button>
+					</div>
+				</div>
+			</form>
+		</div>
+	</div>
+	<!-- core JavaScript
+	================================================== -->
+	<!-- Placed at the end of the document so the pages load faster -->
+	<!-- Compiled and minified JQuery -->
+	<script src="https://code.jquery.com/jquery-3.2.1.min.js"
+	integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+	crossorigin="anonymous"></script>
+	<!-- Compiled and minified JavaScript -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.1/js/materialize.min.js"></script>
+	<!-- Custom scripts -->
+	<script src="scripts/scripts.js"></script>
+	<!--
+	================================================== -->
+
+	<script src="https://js.instamojo.com/v1/button.js"></script>
+	<link rel="stylesheet" href="css/confirmbox.css">
+</body>
+</html>
