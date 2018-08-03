@@ -63,7 +63,7 @@
 							<div class="row">
 								<div class="input-field col s12 m8">
 									<i class="material-icons prefix white-text text-darken-2 background-icon">people</i>
-									<input id="team_name" name="teamName"type="text" class="validate" data-length="20" maxlength="20" required>
+									<input id="team_name" name="teamName" type="text" class="validate" data-length="20" maxlength="20" pattern="[^.#[\]$]*" title="Please don't use '#', '.', '$', '[' or ']'" required>
 									<label for="team_name">Team Name</label>
 								</div>
 								<div class="input-field col s12 m4">
@@ -132,6 +132,16 @@
 						<button type="submit" class="waves-effect waves-light btn darkBlue modal-trigger">
 							<i class="material-icons right">done</i>Register!
 						</button>
+					</div>
+					<div class="col s12 center">
+						<br />
+						<div id="loader" class="preloader-wrapper">
+								<div class="spinner-layer spinner-red-only">
+									<div class="circle-clipper left"><div class="circle"></div></div>
+									<div class="gap-patch"><div class="circle"></div></div>
+									<div class="circle-clipper right"><div class="circle"></div></div>
+								</div>
+						</div>
 					</div>
 				</div>
 			</form>

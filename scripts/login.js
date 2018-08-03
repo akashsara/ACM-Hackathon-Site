@@ -9,7 +9,7 @@ function Confirm(title, msg, $true) { /*change*/
                  "</div>" +
                  "<footer>" +
                      "<div class='controls'>" +
-                         " <button class='button button-danger doAction'>" + $true + "</button> " +
+                         " <a class='button button-danger doAction' href=\"index.html\" target=\"_self\">" + $true + "</a>" +
                      "</div>" +
                  "</footer>" +
               "</div>" +
@@ -133,13 +133,10 @@ function writeto(){
     }
 
       console.log("end");
-      Confirm("Good Luck!", "You have successfully registered as \"" + x.elements[0].value + "\".\nYou will receive a confirmation mail by the end of the day.", "Okay");
+	  $('#loader').addClass('active');
       setTimeout(function() {
-		if (databaseUpdate = true){
-			console.log("Redirect")
-			window.location = "index.html";
-		}
-	  }, 3000);
-	  
+		  Confirm("Good Luck!", "You have successfully registered as \"" + x.elements[0].value + "\".\nYou will receive a confirmation mail by the end of the day.", "Okay")
+		  $('#loader').removeClass('active');
+	  }, 1500);
       return false
 }
