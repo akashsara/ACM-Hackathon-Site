@@ -44,7 +44,7 @@ var member3 = `<li class="member3">
 			<div class="input-field col s12 m12">
 				<i class="material-icons prefix white-text text-darken-2 background-icon">person</i>
 				<input id="member3_name" name="member3_name" type="text" class="validate" data-length="40" maxlength="40" pattern="[a-zA-Z .,']*" title="Names generally have only alphabets" required>
-				<label for="member3_name">First Name</label>
+				<label for="member3_name">Name</label>
 			</div>
 		</div>
 		<div class="row">

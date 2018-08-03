@@ -1,4 +1,4 @@
-function Confirm(title, msg, $true, $false, $link) { /*change*/
+function Confirm(title, msg, $true) { /*change*/
     var $content =  "<div class='dialog-ovelay'>" +
                     "<div class='dialog'><header>" +
                      " <h3> " + title + " </h3> " +
@@ -15,17 +15,16 @@ function Confirm(title, msg, $true, $false, $link) { /*change*/
               "</div>" +
             "</div>";
      $('body').prepend($content);
-  $('.doAction').click(function () {
-    $(this).parents('.dialog-ovelay').fadeOut(500, function () {
-      $(this).remove();
-    });
-  });
-$('.cancelAction, .fa-close').click(function () {
-    $(this).parents('.dialog-ovelay').fadeOut(500, function () {
-      $(this).remove();
-    });
-  });
-  
+	$('.doAction').click(function () {
+		$(this).parents('.dialog-ovelay').fadeOut(500, function () {
+		  $(this).remove();
+		});
+	});
+	$('.cancelAction, .fa-close').click(function () {
+		$(this).parents('.dialog-ovelay').fadeOut(500, function () {
+			$(this).remove();
+		});
+	}); 
 }
 
 
@@ -33,6 +32,7 @@ $('.cancelAction, .fa-close').click(function () {
 function writeto(){
     try{
         console.log('DB updating');
+		var databaseUpdate = false;
         var x = document.getElementById("regform");
         var TeamName = x.elements[0].value;
         var no_members = x.elements[2].value;
@@ -56,6 +56,7 @@ function writeto(){
                 }
                 else{
                     console.log("data written successfully");
+					databaseUpdate = true;
                 }
             });
         }
@@ -78,6 +79,14 @@ function writeto(){
                     },
             },
             Abstract:Abstract
+            }, function(error){
+                if (error){
+                    console.log("error");
+                }
+                else{
+                    console.log("data written successfully");
+					databaseUpdate = true;
+                }
             });
         }
         else{
@@ -106,6 +115,14 @@ function writeto(){
                     },
             },
             Abstract:Abstract
+            }, function(error){
+                if (error){
+                    console.log("error");
+                }
+                else{
+                    console.log("data written successfully");
+					databaseUpdate = true;
+                }
             });
         
         }
@@ -116,9 +133,13 @@ function writeto(){
     }
 
       console.log("end");
-      var r=Confirm("'Good Luck!'", "You have successfully registered as " + x.elements[0].value, "Confirm", "Deny", "index.html");
-      if (r){
-          window.location.href="/index.html";
-      }
+      Confirm("Good Luck!", "You have successfully registered as \"" + x.elements[0].value + "\".\nYou will receive a confirmation mail by the end of the day.", "Okay");
+      setTimeout(function() {
+		if (databaseUpdate = true){
+			console.log("Redirect")
+			window.location = "index.html";
+		}
+	  }, 3000);
+	  
       return false
 }
