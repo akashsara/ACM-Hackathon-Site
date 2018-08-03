@@ -63,7 +63,7 @@
 							<div class="row">
 								<div class="input-field col s12 m8">
 									<i class="material-icons prefix white-text text-darken-2 background-icon">people</i>
-									<input id="team_name" name="teamName"type="text" class="validate" data-length="20" required>
+									<input id="team_name" name="teamName"type="text" class="validate" data-length="20" maxlength="20" required>
 									<label for="team_name">Team Name</label>
 								</div>
 								<div class="input-field col s12 m4">
@@ -80,7 +80,7 @@
 								<div class="input-field col s12">
 									<i class="material-icons prefix white-text text-darken-2 background-icon">backup</i>
 									<label>Abstract (1500 characters max)</label>
-									<textarea id="abstract" name="Abstract" class="validate" data-length="1500" required></textarea>
+									<textarea id="abstract" name="Abstract" class="validate" data-length="1500" maxlength="1500" required></textarea>
 								</div>
 								<p class="black-text" style="padding: 10px">
 									Abstract should be on <span class="bold">making an individual safer in the modern world.</span> We're just looking for ideas, not implementations here. That comes during the hackathon. You have space for 1500 characters. We don't expect it to be even that big. Keep it short and to the point.
@@ -94,21 +94,21 @@
 							<div class="row">
 								<div class="input-field col s12 m12">
 									<i class="material-icons prefix white-text text-darken-2 background-icon">person</i>
-									<input id="member1_name" name="member1_name" type="text" class="validate" data-length="40" pattern="[a-zA-Z]*" title="Names generally have only alphabets" required>
+									<input id="member1_name" name="member1_name" type="text" class="validate" data-length="40" maxlength="40" pattern="[a-zA-Z .,']*" title="Names generally have only alphabets" required>
 									<label for="member1_name">Name</label>
 								</div>
 							</div>
 							<div class="row">
 								<div class="input-field col s12">
 									<i class="material-icons prefix white-text text-darken-2 background-icon">school</i>
-									<input id="member1_college" name="member1_college"type="text" class="validate" data-length="50" pattern="[a-zA-Z,.]*" title="Names generally have only alphabets" required>
+									<input id="member1_college" name="member1_college"type="text" class="validate" data-length="50" maxlength="50" pattern="[a-zA-Z .,']*" title="Names generally have only alphabets" required>
 									<label for="member1_college">College Name</label>
 								</div>
 							</div>
 							<div class="row">
 								<div class="input-field col s12 m6">
 									<i class="material-icons prefix white-text text-darken-2 background-icon">email</i>
-									<input id="member1_email" name="member1_email"type="email" class="validate" data-length="35" required>
+									<input id="member1_email" name="member1_email"type="email" class="validate" data-length="35" maxlength="35" required>
 									<label for="member1_email">Email</label>
 								</div>
 								<div class="input-field col s12 m6">
@@ -120,7 +120,7 @@
 							<div class="row">
 								<div class="input-field col s12">
 									<i class="material-icons prefix white-text text-darken-2 background-icon">computer</i>
-									<input id="member1_github" name="member1_github" type="text" class="validate" data-length="80">
+									<input id="member1_github" name="member1_github" type="text" class="validate" data-length="80" maxlength="80">
 									<label for="member1_github">Github (Or Alternative)</label>
 								</div>
 							</div>
@@ -151,7 +151,6 @@
 	<!--
 	================================================== -->
 
-	<script src="https://js.instamojo.com/v1/button.js"></script>
 	<link rel="stylesheet" href="css/confirmbox.css">
 </body>
 </html>
