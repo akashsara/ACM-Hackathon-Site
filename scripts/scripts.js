@@ -4,21 +4,21 @@ var member2 = `<li class="member2">
 		<div class="row">
 			<div class="input-field col s12 m12">
 				<i class="material-icons prefix white-text text-darken-2 background-icon">person</i>
-				<input id="member2_name" name="member2_name" type="text" class="validate" data-length="20" pattern="[a-zA-Z]*" title="Names generally have only alphabets" required>
+				<input id="member2_name" name="member2_name" type="text" class="validate" data-length="40" maxlength="40" pattern="[a-zA-Z .,']*" title="Names generally have only alphabets" required>
 				<label for="member2_name">Name</label>
 			</div>
 		</div>
 		<div class="row">
 			<div class="input-field col s12">
 				<i class="material-icons prefix white-text text-darken-2 background-icon">school</i>
-				<input id="member2_college" name="member2_college"type="text" class="validate" data-length="50" pattern="[a-zA-Z,.]*" title="Names generally have only alphabets" required>
+				<input id="member2_college" name="member2_college"type="text" class="validate" data-length="50" maxlength="50" pattern="[a-zA-Z .,']*" title="Names generally have only alphabets" required>
 				<label for="member2_college">College Name</label>
 			</div>
 		</div>
 		<div class="row">
 			<div class="input-field col s12 m6">
 				<i class="material-icons prefix white-text text-darken-2 background-icon">email</i>
-				<input id="member2_email" name="member2_email"type="email" class="validate" data-length="35" required>
+				<input id="member2_email" name="member2_email"type="email" class="validate" data-length="35" maxlength="35" required>
 				<label for="member2_email">Email</label>
 			</div>
 			<div class="input-field col s12 m6">
@@ -30,7 +30,7 @@ var member2 = `<li class="member2">
 		<div class="row">
 			<div class="input-field col s12">
 				<i class="material-icons prefix white-text text-darken-2 background-icon">computer</i>
-				<input id="member2_github" name="member2_github" type="text" class="validate" data-length="80">
+				<input id="member2_github" name="member2_github" type="text" class="validate" data-length="80" maxlength="80">
 				<label for="member2_github">Github (Or Alternative)</label>
 			</div>
 		</div>
@@ -43,21 +43,21 @@ var member3 = `<li class="member3">
 		<div class="row">
 			<div class="input-field col s12 m12">
 				<i class="material-icons prefix white-text text-darken-2 background-icon">person</i>
-				<input id="member3_name" name="member3_name" type="text" class="validate" data-length="20" pattern="[a-zA-Z]*" title="Names generally have only alphabets" required>
-				<label for="member3_name">First Name</label>
+				<input id="member3_name" name="member3_name" type="text" class="validate" data-length="40" maxlength="40" pattern="[a-zA-Z .,']*" title="Names generally have only alphabets" required>
+				<label for="member3_name">Name</label>
 			</div>
 		</div>
 		<div class="row">
 			<div class="input-field col s12">
 				<i class="material-icons prefix white-text text-darken-2 background-icon">school</i>
-				<input id="member3_college" name="member3_college"type="text" class="validate" data-length="50" pattern="[a-zA-Z,.]*" title="Names generally have only alphabets" required>
+				<input id="member3_college" name="member3_college"type="text" class="validate" data-length="50" maxlength="50" pattern="[a-zA-Z .,']*" title="Names generally have only alphabets" required>
 				<label for="member3_college">College Name</label>
 			</div>
 		</div>
 		<div class="row">
 			<div class="input-field col s12 m6">
 				<i class="material-icons prefix white-text text-darken-2 background-icon">email</i>
-				<input id="member3_email" name="member3_email"type="email" class="validate" data-length="35" required>
+				<input id="member3_email" name="member3_email"type="email" class="validate" data-length="35" maxlength="35" required>
 				<label for="member3_email">Email</label>
 			</div>
 			<div class="input-field col s12 m6">
@@ -69,7 +69,7 @@ var member3 = `<li class="member3">
 		<div class="row">
 			<div class="input-field col s12">
 				<i class="material-icons prefix white-text text-darken-2 background-icon">computer</i>
-				<input id="member3_github" name="member3_github" type="text" class="validate" data-length="80">
+				<input id="member3_github" name="member3_github" type="text" class="validate" data-length="80" maxlength="80">
 				<label for="member3_github">Github (Or Alternative)</label>
 			</div>
 		</div>

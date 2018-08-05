@@ -9,25 +9,22 @@ function Confirm(title, msg, $true, $false, $link) { /*change*/
                  "</div>" +
                  "<footer>" +
                      "<div class='controls'>" +
-                         " <button class='button button-danger doAction'>" + $true + "</button> " +
+                         " <a class='button button-danger doAction' href=\"index.html\" target=\"_self\">" + $true + "</a>" +
                      "</div>" +
                  "</footer>" +
               "</div>" +
             "</div>";
      $('body').prepend($content);
-  $('.doAction').click(function () {
-    //window.open($link,"_self"); /*new*/
-    window.location = "index.html";
-    $(this).parents('.dialog-ovelay').fadeOut(500, function () {
-      $(this).remove();
-    });
-  });
-$('.cancelAction, .fa-close').click(function () {
-    $(this).parents('.dialog-ovelay').fadeOut(500, function () {
-      $(this).remove();
-    });
-  });
-  
+	$('.doAction').click(function () {
+		$(this).parents('.dialog-ovelay').fadeOut(500, function () {
+		  $(this).remove();
+		});
+	});
+	$('.cancelAction, .fa-close').click(function () {
+		$(this).parents('.dialog-ovelay').fadeOut(500, function () {
+			$(this).remove();
+		});
+	}); 
 }
 
 
@@ -35,6 +32,7 @@ $('.cancelAction, .fa-close').click(function () {
 function writeto(){
     try{
         console.log('DB updating');
+		var databaseUpdate = false;
         var x = document.getElementById("regform");
         var TeamName = x.elements[0].value;
         var no_members = x.elements[2].value;
@@ -58,11 +56,13 @@ function writeto(){
                 }
                 else{
                     console.log("data written successfully");
+					databaseUpdate = true;
                 }
             });
         }
         else if (no_members=='2'){
             firebase.database().ref('teams/' + TeamName + "__ref:"+ num.toString() + '/').set({
+                [TeamName]:{
                     Member1:{
                         Name:x.elements[4].value,
                         College:x.elements[5].value,
@@ -77,11 +77,21 @@ function writeto(){
                         Phone:x.elements[12].value,
                         Github:x.elements[13].value
                     },
+            },
             Abstract:Abstract
+            }, function(error){
+                if (error){
+                    console.log("error");
+                }
+                else{
+                    console.log("data written successfully");
+					databaseUpdate = true;
+                }
             });
         }
         else{
             firebase.database().ref('teams/' + TeamName + "__ref:"+ num.toString() + '/').set({
+                [TeamName]:{
                     Member1:{
                         Name:x.elements[4].value,
                         College:x.elements[5].value,
@@ -103,7 +113,16 @@ function writeto(){
                         Phone:x.elements[17].value,
                         Github:x.elements[18].value
                     },
+            },
             Abstract:Abstract
+            }, function(error){
+                if (error){
+                    console.log("error");
+                }
+                else{
+                    console.log("data written successfully");
+					databaseUpdate = true;
+                }
             });
         
         }
@@ -114,9 +133,10 @@ function writeto(){
     }
 
       console.log("end");
-      var r=Confirm("'Good Luck!'", "You have successfully registered as " + x.elements[0].value, "Confirm", "Deny", "/index.html");
-    //   if (r){
-    //       window.location.href="/index.html";
-    //   }
+	  $('#loader').addClass('active');
+      setTimeout(function() {
+		  Confirm("Good Luck!", "You have successfully registered as \"" + x.elements[0].value + "\".\nYou will receive a confirmation mail by the end of the day.", "Okay")
+		  $('#loader').removeClass('active');
+	  }, 1500);
       return false
 }
