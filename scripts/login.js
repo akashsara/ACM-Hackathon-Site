@@ -29,10 +29,10 @@ function Confirm(title, msg, $true) { /*change*/
 
 
 
-function writeto(){
+function writeto(callback){
     try{
+		$('#loader').addClass('active');
         console.log('DB updating');
-		var databaseUpdate = false;
         var x = document.getElementById("regform");
         var TeamName = x.elements[0].value;
         var no_members = x.elements[2].value;
@@ -56,7 +56,7 @@ function writeto(){
                 }
                 else{
                     console.log("data written successfully");
-					databaseUpdate = true;
+					callback(TeamName);
                 }
             });
         }
@@ -85,7 +85,7 @@ function writeto(){
                 }
                 else{
                     console.log("data written successfully");
-					databaseUpdate = true;
+					callback(TeamName);
                 }
             });
         }
@@ -121,7 +121,7 @@ function writeto(){
                 }
                 else{
                     console.log("data written successfully");
-					databaseUpdate = true;
+					callback(TeamName);
                 }
             });
         
@@ -131,12 +131,11 @@ function writeto(){
     catch(err){
         console.log(err);
     }
-
       console.log("end");
-	  $('#loader').addClass('active');
-      setTimeout(function() {
-		  Confirm("Good Luck!", "You have successfully registered as \"" + x.elements[0].value + "\".\nYou will receive a confirmation mail by the end of the day.", "Okay")
-		  $('#loader').removeClass('active');
-	  }, 1500);
-      return false
+}
+
+function popup(TeamName) {
+	console.log("Popup triggered")
+	Confirm("Good Luck!", "You have successfully registered as \"" + TeamName + "\".\nYou will receive a confirmation mail by the end of the day.", "Okay")
+	$('#loader').removeClass('active');
 }
